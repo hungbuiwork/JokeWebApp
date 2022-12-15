@@ -1,0 +1,157 @@
+
+
+*{
+  font-family: 'Oswald', sans-serif;
+  color: white;
+}
+div {
+  margin: 0 0;
+  background-color: #181818;
+}
+
+
+button img{
+  height: 2rem;
+  width: 2rem;
+}
+button{
+  font-size: 2rem;
+  background-color: #F55914;
+  color:white;
+  border: 0px;
+    margin: 5px 5px;
+}
+#discardButton{
+  background-color: #B92B27;
+}
+#generateButton{
+  background-color: #02B875;
+}
+#favoriteButton{
+  background-color: #0077B5;
+}
+#feedback{
+    color:#02B875;
+}
+#status{
+  color:#02B875;
+}
+#zoom{
+  background-color: #9452AE;
+}
+button img{
+  filter: brightness(0) invert(1);
+}
+button div{
+  background-color: inherit;
+}
+
+.mode{
+  display: flex;
+}
+.mode button{
+  width: 50%;
+  flex: 50%;
+  background-color: #2b2b2b;
+}
+.container{
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+
+.title{
+  text-align: center;
+  color:white;
+  background-color: #101011;
+}
+
+.title *{
+  margin: 0 0;
+}
+.title h1{
+  font-size: 5rem;
+}
+.title h2{
+  font-size: 2rem;
+}
+.title h3{
+  font-size: 1rem;
+}
+
+.image_group{
+  display: flex;
+  justify-content: center;
+  background-color: inherit;
+}
+.image_group img{
+  width: 2rem;
+  height: 2rem;
+}
+
+.swipe{
+  display:flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #0f0f0f;
+}
+.swipe button{
+  background-color: white;
+  color: black;
+}
+.swipe button img{
+  filter: brightness(0) invert(0);
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content *{
+  text-align: center;
+}
+
+.content .joke{
+  font-size: 2rem;
+  color: white;
+}
+
+.content .joke.zoomed{
+  font-size: 2.5rem;
+}
+
+.button_column{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+      background-color: #0f0f0f;
+}
+
+.favorites .list{
+  height:440px;
+  overflow-y:auto;
+}
+
+.favorites h1{
+  font-size: 1.2rem;
+}
+.favorites h2{
+  font-size: 1.2rem;
+}
+.favorites h3{
+  font-size: 2rem;
+}
+.favorites button{
+  background-color: #B92B27;
+  font-size: 1.2rem;
+}

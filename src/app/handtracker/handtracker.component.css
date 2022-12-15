@@ -1,0 +1,18 @@
+.videobox{
+    border: 3px solid #0063FF;
+    border-color: #0063FF;
+    width: 200px;
+    height: 200px;
+}
+*{
+  font-family: 'Oswald', sans-serif;
+}
+
+.start-stop{
+  display: flex;
+  justify-content: center;
+}
+
+.start-stop button{
+  width: 50%;
+}

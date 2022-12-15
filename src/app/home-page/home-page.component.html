@@ -1,0 +1,25 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+<body>
+
+  <div>
+    <app-jokes-generating-interface></app-jokes-generating-interface>
+    <app-handtracker (onPrediction)="prediction($event)" *ngIf="1"></app-handtracker>
+  </div>
+  <br>
+
+  <button (click)="viewImageSources = !viewImageSources" name="button">View Image Credits</button>
+  <div *ngIf="viewImageSources">
+    <a href="https://www.flaticon.com/free-icons/hand" title="hand icons">Hand icons created by Vitaly Gorbachev - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/cursor" title="cursor icons">Cursor icons created by berkahicon - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/fist" title="fist icons">Fist icons created by vectorspoint - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/next" title="next icons">Next icons created by Arkinasi - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/previous" title="previous icons">Previous icons created by Arkinasi - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/star" title="star icons">Star icons created by Pixel perfect - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/star" title="star icons">Star icons created by mim_studio - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/zoom-in" title="zoom in icons">Zoom in icons created by Prosymbols - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/trash" title="trash icons">Trash icons created by Freepik - Flaticon</a>
+  </div>
+  </body>

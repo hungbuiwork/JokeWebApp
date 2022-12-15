@@ -1,0 +1,8 @@
+<p>Detected Gesture</p>
+<h1>{{detectedGesture}}</h1>
+<div class = "start-stop">
+<button (click)="startDetection()">Start</button>
+<button (click)="stopDetection()">Stop</button>
+</div>
+<video id="htvideo" #htvideo name="htvideo" class="videobox" autoplay="autoplay"></video>
+<p>Status: {{status}}</p>

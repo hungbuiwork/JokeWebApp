@@ -1,0 +1,22 @@
+:root{
+  --dark: #0a121f;
+}
+body{
+  background-color:#d2d2d9 ;
+  height: 100%;
+  width: 100%;
+  margin: 0 0;
+}
+div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+app-jokes-generating-interface{
+  width: 90%;
+}
+
+*{
+    font-family: 'Oswald', sans-serif;
+}

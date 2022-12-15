@@ -1,0 +1,92 @@
+
+<div class="container">
+  <div class="title">
+    <h1>Joke Browser</h1>
+    <h2>by Hung Bui </h2>
+    <h3>Jokes generated from <a>https://sv443.net/jokeapi/v2/</a></h3>
+  </div>
+
+  <div class="mode">
+    <button (click)="mode = 'search'">View Jokes</button>
+    <button (click)="mode = 'favorites'">View Favorites</button>
+  </div>
+
+  <div class="favorites" *ngIf="mode == 'favorites'">
+    <h3>Your Favorites</h3>
+    <div class="list">
+      <div *ngFor="let joke of favoriteValues">
+        <h1>{{joke.setup}}</h1>
+        <h2>{{joke.delivery}}</h2>
+        <button (click)="favorite(joke)">Remove</button>
+        <br>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="mode == 'search'">
+    <div class="swipe" *ngIf="mode == 'search'">
+      <button id="#leftButton" (click)="prev()">
+        <img src="../../../assets/images/left.png">
+        <img src="../../../assets/images/open_hand.png">
+        <img src="../../../assets/images/left.png">
+        Prev
+      </button>
+      <h2>{{indexString()}}</h2>
+      <button id="#rightButton" (click)="next()">
+        Next
+        <img src="../../../assets/images/right.png">
+        <img src="../../../assets/images/open_hand.png">
+        <img src="../../../assets/images/right.png">
+      </button>
+    </div>
+
+    <div class="columns">
+      <div class="button_column">
+        <button id="discardButton" (click)="discardAll()">
+          Discard All
+          <div class="image_group">
+            <img src="../../../assets/images/pointed_hand.png">
+            <img src="../../../assets/images/pointed_hand.png">
+          </div>
+        </button>
+        <button id="generateButton" (click)="generateJokes()">
+          Generate
+          <div class="image_group">
+            <img src="../../../assets/images/open_hand.png">
+            <img src="../../../assets/images/open_hand.png">
+          </div>
+        </button>
+      </div>
+
+
+      <div class="content">
+        <p class="joke">{{setup}}</p>
+        <button *ngIf="!delivery && jokeService.activeIndex != -1" id="#revealButton" (click)="reveal()">
+          Reveal
+          <img src="../../../assets/images/closed-hand.png">
+        </button>
+        <p *ngIf="delivery" class="joke">{{delivery}}</p>
+        <p id="feedback">{{feedbackString}}</p>
+        <p id="status" *ngIf = "!feedbackString">{{status}}</p>
+      </div>
+
+
+      <div class="button_column">
+        <button id="zoom" (mousedown)="zoom()" (mouseup)="unzoom()">
+          <img src="../../../assets/images/zoom-in.png">
+          <div class="image_group">
+            <img src="../../../assets/images/closed-hand.png">
+            <img src="../../../assets/images/closed-hand.png">
+          </div>
+        </button>
+        <button id = "favoriteButton" (click)="favorite()">
+          <img *ngIf="!favorited" src="../../../assets/images/star_empty.png">
+          <img *ngIf="favorited" src="../../../assets/images/star_filled.png">
+          <div>
+            <img src="../../../assets/images/pointed_hand.png">
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
